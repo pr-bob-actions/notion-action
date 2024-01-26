@@ -1,9 +1,3 @@
-// const axios = require("axios");
-// const btoa = require("btoa");
-// const core = require("@actions/core");
-// const github = require("@actions/github");
-// const { Client } = require("@notionhq/client");
-
 import axios from "axios";
 import btoa from "btoa";
 import * as core from "@actions/core";
@@ -18,7 +12,8 @@ const getGitHubRequestHeaders = (username: string, accessToken: string) => ({
 const updateNotionStory = async (
   notionKey: string,
   notionPageId: string,
-) => {
+) => 
+{
   const notion = new Client({ auth: notionKey });
   await notion.blocks.children.append({
     block_id: notionPageId,
