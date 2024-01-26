@@ -1,4 +1,4 @@
-name: "Notion Update Page"
+name: "Stellia, Update Notion Page with commit messages"
 description: "Update Notion page on commit"
 branding:
   icon: book-open
