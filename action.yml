@@ -1,0 +1,21 @@
+name: "Notion Update Page"
+description: "Update Notion page on commit"
+branding:
+  icon: book-open
+  color: white
+inputs:
+  gh-username:
+    description: "GitHub username of user who has access to the repository"
+    required: true
+  gh-token:
+    description: "GitHub access token of user who has access to the repository"
+    required: true
+  notion-key:
+    description: "Notion Integration Secret Key"
+    required: true
+  notion-page-id:
+    description: "Notion Page ID to be updated"
+    required: true
+runs:
+  using: "node20"
+  main: "dist/index.js"
